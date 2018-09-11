@@ -1,6 +1,5 @@
 export default () => {
-  return;
-  [
+  return [
     { title: "Harry Potter" },
     { title: "JavaScript: The Good Parts" },
     { title: "Eloquent JavaScript" },
