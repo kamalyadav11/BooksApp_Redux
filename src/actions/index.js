@@ -1,3 +1,5 @@
-export const selectBook = book => {
-  console.log("A book hnas been selected: ", book.title);
-};
+export const selectBook = book => ({
+  //selectBook is an ActionCreator, it needs to return an action, i.e; an object with a type property
+  type: "BOOK_SELECTED",
+  payload: book
+});
