@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class BookList extends Component {
+class BookList extends Component {
   renderList = () => {
     return this.props.books.map(book => {
       return (
@@ -18,3 +19,11 @@ export default class BookList extends Component {
     );
   }
 }
+
+//whenever state is updated, BookList component is gonna re-render
+const mapStateToProps = state => ({
+  // whatever is returned from hggere will show up as props inside of BookList
+  books: state.books
+});
+
+export default connect(mapStateToProps)(BookList);
